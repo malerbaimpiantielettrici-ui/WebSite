@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaetano Malerba Impianti Elettrici | Terlizzi</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="website icon" href="immagini/logo.jpeg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <img src="immagini/logo.jpeg" alt="logo">
+  <h1>Gaetano Malerba Impianti Elettrici</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#chi-siamo">Chi siamo</a>
+    <a href="#servizi">Servizi</a>
+    <a href="#lavori">Lavori</a>
+    <a href="#recensioni">Recensioni</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <h2>Elettricista a Terlizzi – Interventi rapidi e certificati</h2>
+  <p>Esperienza, precisione e innovazione al servizio della tua sicurezza ⚡</p>
+  <div class="cta">
+    <a href="https://wa.me/tuonumeroditelefono" target="_blank" class="review">WhatsApp</a>
+    <a href="#recensioni" class="review">Lascia una recensione</a>
+  </div>
+</section>
+
+<!-- CHI SIAMO -->
+<section id="chi-siamo" class="fade-in">
+<h2 class="section-title">Chi Siamo</h2>
+<div class="about">
+  <img src="immagini/gruppo.jpeg" alt="Team">
+  <div>
+    <p>Da oltre 6 anni realizziamo impianti elettrici civili e industriali con soluzioni all’avanguardia e massima sicurezza.</p>
+    <p>Operiamo a <strong>Terlizzi (BA)</strong> e dintorni, garantendo qualità, assistenza continua e prodotti certificati.</p>
+    <p style="margin-top:1rem;">🔧 Affidabilità • ⚡ Innovazione • 🏠 Assistenza dedicata</p>
+  </div>
+</div>
+</section>
+
+<!-- SERVIZI -->
+<section id="servizi" class="fade-in">
+<h2 class="section-title">I Nostri Servizi</h2>
+<div class="services">
+  <div class="service"><h3>💡 Impianti Elettrici</h3><p>Installazione, manutenzione e adeguamento impianti civili e industriali.</p></div>
+  <div class="service"><h3>🔐 Allarmi & Videosorveglianza</h3><p>Sistemi di sicurezza avanzati con gestione da remoto.</p></div>
+  <div class="service"><h3>🏠 Domotica & Smart Home</h3><p>Controllo intelligente di luci, temperatura e sicurezza.</p></div>
+  <div class="service"><h3>📡 Antenne & Citofonia</h3><p>Installazione, configurazione e assistenza per impianti condominiali.</p></div>
+  <div class="service"><h3>⚙️ Pronto Intervento</h3><p>Interventi rapidi per guasti, sistemazioni e manutenzioni urgenti.</p></div>
+</div>
+</section>
+
+<!-- GALLERIA -->
+<section id="lavori" class="fade-in">
+<h2 class="section-title">I Nostri Lavori</h2>
+<div class="slider">
+  <div class="slides">
+    <img src="immagini/lavoro1.jpg" alt="Lavoro1">
+    <img src="immagini/lavoro2.jpg" alt="Lavoro2">
+    <img src="immagini/lavoro3.jpg" alt="Lavoro3">
+    <img src="immagini/lavoro4.jpg" alt="Lavoro4">
+    <img src="immagini/lavoro5.jpg" alt="Lavoro5">
+    <img src="immagini/lavoro6.jpg" alt="Lavoro6">
+    <img src="immagini/lavoro7.jpg" alt="Lavoro7">
+    <img src="immagini/lavoro8.jpg" alt="Lavoro7">
+  </div>
+</div>
+</section>
+
+<!-- RECENSIONI -->
+<section id="recensioni" class="fade-in">
+<h2 class="section-title">Recensioni Clienti</h2>
+<div class="trust" style="text-align:center; margin-bottom:2rem;">
+  <button id="openReview" class="review">Lascia una recensione</button>
+</div>
+<div id="reviewList"></div>
+<div id="reviewForm" style="display:none; margin-top:2rem; max-width:600px; margin:auto;">
+  <input type="text" id="reviewName" placeholder="Nome">
+  <textarea id="reviewText" placeholder="Scrivi la tua recensione..."></textarea>
+  <label>Valutazione:
+    <select id="reviewStars">
+      <option value="5">★★★★★</option>
+      <option value="4">★★★★</option>
+      <option value="3">★★★</option>
+      <option value="2">★★</option>
+      <option value="1">★</option>
+    </select>
+  </label>
+  <button id="saveReview" class="review">Invia</button>
+</div>
+</section>
+
+<!-- SOCIAL FLOAT -->
+<div class="social">
+  <a href="https://wa.me/3318165350" target="_blank">WhatsApp</a>
+  <a href="https://instagram.com/tuoprofilo" target="_blank" class="instagram">Instagram</a>
+  <a href="tel:tuonumeroditelefono" class="call">Chiama</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    &copy; <span id="year"></span>
+    <strong>Gaetano Malerba – Impianti Elettrici</strong>
+  </p>
+  <p>
+    Via Carità,23 Terlizzi (BA) – P. IVA 08266020729
+  </p>
+  <p>
+    Tel: <a href="tel:+393318165350">+39 3318165350</a> |
+    PEC: <a href="mailto:gaetanomalerba.89@pec.it">gaetanomalerba.89@pec.it</a>
+  </p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script>
+// HEADER SCROLL
+window.addEventListener('scroll',()=>{document.querySelector('header').classList.toggle('scrolled',window.scrollY>50);});
+
+// FADE-IN
+const elements=document.querySelectorAll('.fade-in');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting)entry.target.classList.add('visible');
+  });
+},{threshold:0.2});
+elements.forEach(el=>observer.observe(el));
+
+// LOCALSTORAGE RECENSIONI
+const reviewList=document.getElementById('reviewList');
+const reviewForm=document.getElementById('reviewForm');
+const openReview=document.getElementById('openReview');
+const saveReview=document.getElementById('saveReview');
+function loadReviews(){
+  const reviews=JSON.parse(localStorage.getItem('reviews')||'[]');
+  reviewList.innerHTML='';
+  reviews.forEach(r=>{
+    const div=document.createElement('div');
+    div.style.background='#f3f4f7';
+    div.style.padding='1rem';
+    div.style.borderRadius='12px';
+    div.style.boxShadow='0 4px 12px rgba(0,0,0,0.08)';
+    div.style.marginBottom='1rem';
+    div.innerHTML=`<strong>${r.name}</strong> <span style="color:#ffd700;">${'★'.repeat(r.stars)}</span><p>${r.text}</p>`;
+    reviewList.appendChild(div);
+  });
+}
+openReview.addEventListener('click',()=>{reviewForm.style.display=reviewForm.style.display==='none'?'block':'none';});
+saveReview.addEventListener('click',()=>{
+  const name=document.getElementById('reviewName').value.trim();
+  const text=document.getElementById('reviewText').value.trim();
+  const stars=parseInt(document.getElementById('reviewStars').value);
+  if(name && text){
+    const reviews=JSON.parse(localStorage.getItem('reviews')||'[]');
+    reviews.push({name,text,stars});
+    localStorage.setItem('reviews',JSON.stringify(reviews));
+    document.getElementById('reviewName').value='';
+    document.getElementById('reviewText').value='';
+    document.getElementById('reviewStars').value='5';
+    loadReviews();
+  } else { alert('Compila tutti i campi!'); }
+});
+loadReviews();
+
+// SLIDER AUTOMATICO
+let slideIndex=0;
+const slides=document.querySelector('.slides');
+const totalSlides=slides.children.length;
+setInterval(()=>{
+  slideIndex=(slideIndex+1)%totalSlides;
+  slides.style.transform=`translateX(-${slideIndex*100}%)`;
+},4000);
+</script>
+
+</body>
+</html>
